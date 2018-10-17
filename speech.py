@@ -1,9 +1,10 @@
 import speech_recognition as sr
+import sounddevice as sd
 print(sr.__version__)
 
 r = sr.Recognizer()
 
-ccp  = sr.AudioFile('audio.wav')
+ccp  = sr.AudioFile('audiodecifrar.wav')
 
 with ccp as source:
     audio = r.record(source)
